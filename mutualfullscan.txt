@@ -1,0 +1,58 @@
+# Nmap 7.95 scan initiated Wed Sep  3 07:15:56 2025 as: /usr/lib/nmap/nmap -sV -O -A -p- --script vuln* -oN mutualfullscan.txt testfire.net
+Service scan sending probe NULL to 65.61.137.117:80 (tcp)
+Service scan sending probe NULL to 65.61.137.117:443 (tcp)
+Service scan sending probe NULL to 65.61.137.117:8080 (tcp)
+Service scan sending probe GetRequest to 65.61.137.117:80 (tcp)
+Service scan sending probe SSLSessionReq to 65.61.137.117:443 (tcp)
+Service scan sending probe GetRequest to 65.61.137.117:8080 (tcp)
+Service scan hard match (Probe GetRequest matched with GetRequest line 7013): 65.61.137.117:80 is http.  Version: |Apache Tomcat/Coyote JSP engine|1.1||
+Service scan hard match (Probe SSLSessionReq matched with SSLSessionReq line 13728): 65.61.137.117:443 is ssl.  Version: ||||
+Service scan hard match (Probe GetRequest matched with GetRequest line 7013): 65.61.137.117:8080 is http.  Version: |Apache Tomcat/Coyote JSP engine|1.1||
+Service scan sending probe NULL to 65.61.137.117:443 (tcp)
+Service scan sending probe GetRequest to 65.61.137.117:443 (tcp)
+Service scan hard match (Probe GetRequest matched with GetRequest line 7013): 65.61.137.117:443 is SSL/http.  Version: |Apache Tomcat/Coyote JSP engine|1.1||
+Nmap scan report for testfire.net (65.61.137.117)
+Host is up (0.24s latency).
+Not shown: 65531 filtered tcp ports (no-response)
+PORT     STATE  SERVICE   VERSION
+80/tcp   open   http      Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+443/tcp  open   ssl/http  Apache Tomcat/Coyote JSP engine 1.1
+8080/tcp open   http      Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+8443/tcp closed https-alt
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2008|7|2016|10 (92%), FreeBSD 6.X (88%)
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_7 cpe:/o:freebsd:freebsd:6.2 cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 or Windows 8 (92%), Microsoft Windows Server 2008 R2 or Windows 7 SP1 (90%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (89%), FreeBSD 6.2-RELEASE (88%), Microsoft Windows 7 or Windows Server 2008 R2 (88%), Microsoft Windows Server 2016 (88%), Microsoft Windows 7 (87%), Microsoft Windows Server 2008 R2 (86%), Microsoft Windows 10 1607 (86%), Microsoft Windows Server 2008 R2 SP1 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 27 hops
+
+TRACEROUTE (using port 8443/tcp)
+HOP RTT       ADDRESS
+1   73.45 ms  RTKGW.bbrouter (192.168.1.1)
+2   76.30 ms  hyd-tdc-bngs-17 (110.235.231.3)
+3   14.17 ms  110.235.231.1
+4   ...
+5   74.13 ms  10.240.248.100
+6   ...
+7   74.47 ms  14.142.71.93.static-hydrabad.vsnl.net.in (14.142.71.93)
+8   77.66 ms  172.25.81.134
+9   75.19 ms  ix-ae-0-100.tcore1.mlv-mumbai.as6453.net (180.87.38.5)
+10  228.73 ms if-ae-2-2.tcore2.mlv-mumbai.as6453.net (180.87.38.2)
+11  ... 13
+14  228.95 ms 195.219.16.139
+15  ... 17
+18  288.64 ms ae20.cr1.iad21.us.zip.zayo.com (64.125.23.217)
+19  299.02 ms ae14.cr1.dfw1.us.zip.zayo.com (64.125.19.20)
+20  ...
+21  304.38 ms ae6.er3.dfw2.us.zip.zayo.com (64.125.26.55)
+22  293.03 ms 64.125.46.126.IPYX-172935-900-ZYO.zip.zayo.com (64.125.46.126)
+23  ...
+24  287.88 ms corec-dcpe4.dfw1.rackspace.net (148.62.41.103)
+25  298.41 ms core10-corec.dfw1.rackspace.net (148.62.41.135)
+26  297.71 ms core9-aggr171a-8.dfw3.rackspace.net (74.205.108.61)
+27  283.28 ms 65.61.137.117
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep  3 07:29:09 2025 -- 1 IP address (1 host up) scanned in 793.19 seconds
